@@ -1,0 +1,19 @@
+* {
+  outline: 1px solid red;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.section {
+  height: 100vh;
+}
+
+/*# sourceMappingURL=main.css.map */
