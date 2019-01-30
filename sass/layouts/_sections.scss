@@ -1,0 +1,16 @@
+
+.section {
+  min-height: 100vh;
+}
+
+.section-1 {
+  @include background(1);
+}
+
+.section-2 {
+  @include background(2);
+}
+
+.section-3 {
+  @include background(3);
+}

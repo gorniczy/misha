@@ -1,0 +1,11 @@
+@mixin background($val) {
+  @if $val == 1 {
+    background-image: $color-bg-one;
+  }
+  @else if $val == 2 {
+    background: $color-bg-two;
+  }
+  @else {
+    background-image: $color-bg-three;
+  }
+};
