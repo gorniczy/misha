@@ -37,9 +37,7 @@ nav {
   background-image: linear-gradient(-180deg, #477388 0%, #0D394E 100%);
 }
 
-.main-flex {
-  display: flex;
-  flex-direction: column;
+.title-container {
   width: 90vw;
   height: 60vh;
   margin: 0 auto;
