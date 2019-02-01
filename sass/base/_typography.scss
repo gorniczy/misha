@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'Lato';
+  src: url("https://fonts.googleapis.com/css?family=Lato");
+}
+@font-face {
+  font-family: 'Lato';
+  src: url("https://fonts.googleapis.com/css?family=Lato");
+  font-weight: bold;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-size: 64px;
+  font-weight: bold;
+  color: $color-text-dark;
+}
+
+h2 {
+  font-family: 'Lato', sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: $color-text-bright;
+}
+
+h3 {
+  font-family: 'Lato', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: $color-text-dark;
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: $color-text-dark;
+}
+
+a {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  color: $color-text-alt;
+  text-decoration: none;
+}
