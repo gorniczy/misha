@@ -82,17 +82,15 @@ nav {
 }
 
 .title-container {
-  width: 90vw;
-  height: 60vh;
-  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 95vw;
+  height: 65vh;
+  margin: 15% auto 0 auto;
 }
 
-.misha {
-  height: 100%;
-  margin: 0 auto;
-}
-
-nav h1 {
+nav h2 {
   margin: 0;
   padding: 0;
   color: #477388;
@@ -107,6 +105,32 @@ nav ul li {
   display: inline-block;
   padding: 0 5%;
   color: #477388;
+}
+
+.title-container h1 {
+  position: absolute;
+  top: -9%;
+  left: 5%;
+  padding: 0;
+  margin: 0;
+  z-index: 1000;
+}
+.title-container .title-image {
+  display: block;
+  height: 100%;
+  margin: 0 auto;
+}
+.title-container .bubbles {
+  position: absolute;
+  bottom: 15%;
+  right: 10%;
+  height: 10%;
+}
+.title-container h2 {
+  position: absolute;
+  align-self: center;
+  bottom: 2%;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=main.css.map */

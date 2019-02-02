@@ -1,9 +1,10 @@
 .title-container {
-  width: 90vw;
-  height: 60vh;
-  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 95vw;
+  height: 65vh;
+  margin: 15% auto 0 auto;
 }
 
-.flex-container {
-
-}
+.flex-container {}
