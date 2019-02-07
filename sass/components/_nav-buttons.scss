@@ -1,8 +1,14 @@
 nav {
-  ul {
-    width: 70%;
+  .nav-button {
     margin-left: auto;
     padding: 0;
+    margin-right: 5%;
+  }
+  ul {
+    width: 70%;
+    padding: 0;
+    margin-right: -70%;
+    transition: 1s ease-in-out;
 
     li {
       display: inline-block;
