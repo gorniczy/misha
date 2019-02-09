@@ -12,6 +12,7 @@ h1 {
   font-family: 'Lato', sans-serif;
   font-size: 64px;
   font-weight: bold;
+  margin: 0;
   color: $color-text-dark;
 }
 
@@ -19,6 +20,7 @@ h2 {
   font-family: 'Lato', sans-serif;
   font-size: 36px;
   font-weight: bold;
+  margin: 0;
   color: $color-text-bright;
 }
 
@@ -26,6 +28,7 @@ h3 {
   font-family: 'Lato', sans-serif;
   font-size: 24px;
   font-weight: bold;
+  margin: 0;
   color: $color-text-dark;
 }
 
@@ -33,6 +36,7 @@ p {
   font-family: 'Lato', sans-serif;
   font-size: 18px;
   font-weight: bold;
+  margin: 0;
   color: $color-text-dark;
 }
 
@@ -40,5 +44,6 @@ a {
   font-family: 'Lato', sans-serif;
   font-size: 18px;
   color: $color-text-alt;
+  margin: 0;
   text-decoration: none;
 }

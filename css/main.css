@@ -21,6 +21,7 @@ h1 {
   font-family: "Lato", sans-serif;
   font-size: 64px;
   font-weight: bold;
+  margin: 0;
   color: #1A1A1A;
 }
 
@@ -28,6 +29,7 @@ h2 {
   font-family: "Lato", sans-serif;
   font-size: 36px;
   font-weight: bold;
+  margin: 0;
   color: #FFFFFF;
 }
 
@@ -35,6 +37,7 @@ h3 {
   font-family: "Lato", sans-serif;
   font-size: 24px;
   font-weight: bold;
+  margin: 0;
   color: #1A1A1A;
 }
 
@@ -42,6 +45,7 @@ p {
   font-family: "Lato", sans-serif;
   font-size: 18px;
   font-weight: bold;
+  margin: 0;
   color: #1A1A1A;
 }
 
@@ -49,6 +53,7 @@ a {
   font-family: "Lato", sans-serif;
   font-size: 18px;
   color: #477388;
+  margin: 0;
   text-decoration: none;
 }
 
@@ -86,6 +91,22 @@ nav {
   width: 95vw;
   height: 65vh;
   margin: 15% auto 0 auto;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50%;
 }
 
 nav .logo-wrapper {
@@ -174,7 +195,7 @@ nav ul li {
   height: 100%;
   margin: 0 auto;
 }
-.title-container .bubbles {
+.title-container .bubbles-1 {
   position: absolute;
   bottom: 15%;
   right: 10%;
@@ -190,6 +211,56 @@ nav ul li {
 .arrow {
   display: block;
   margin: 10% auto 0 auto;
+}
+
+.content h3 {
+  display: block;
+  text-align: center;
+  padding-top: 10%;
+}
+.content .line-3 {
+  display: block;
+  width: 70%;
+  height: 1px;
+  margin: 10% auto;
+  background-color: #477388;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.card img {
+  width: 100%;
+}
+.card p {
+  text-align: center;
+  padding: 3%;
+}
+
+.footer h3 {
+  margin-top: 5%;
+  color: #FFFFFF;
+}
+.footer p {
+  color: #FFFFFF;
+}
+.footer .phone {
+  margin-top: 5%;
+}
+.footer .address {
+  margin: 5% 0;
+}
+
+.bubbles-2 {
+  align-self: flex-start;
+  margin: 5% 0 0 5%;
+}
+
+.bubbles-3 {
+  align-self: flex-end;
+  margin: 0 5% 5% 0;
 }
 
 /*# sourceMappingURL=main.css.map */
