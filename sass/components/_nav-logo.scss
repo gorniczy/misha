@@ -5,6 +5,7 @@ nav {
     justify-content: center;
     align-items: center;
     width: 17%;
+    max-width: 70px;
     height: 100%;
 
     h2 {
@@ -29,33 +30,24 @@ nav {
 };
 @media only screen and (orientation: landscape) {
   nav {
-    .logo-wrapper {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 15%;
-      height: 100%;
+    overflow: visible;
 
-      h2 {
-        margin: 0;
-        padding: 0;
-        color: $color-primary;
-      }
+    .logo-wrapper {
 
       .line-1 {
         background-color: $color-primary;
         position: absolute;
         bottom: 0;
-        left: 0;
+        left: 15%;
         width: 110%;
         height: 1px;
       }
 
       .line-2 {
+        display: inline;
         background-color: $color-primary;
         position: absolute;
-        top: 0;
+        top: 15%;
         right: 0;
         width: 1px;
         height: 110%;

@@ -2,15 +2,30 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 95vw;
-  height: 65vh;
-  margin: 15% auto 0 auto;
+  justify-content: center;
+  width: 95%;
+  max-width: 500px;
+  height: 65%;
+  margin: 70px auto 0;
 }
 
 .flex-container {
   display: flex;
   flex-wrap: wrap;
   width: 95%;
-  max-width: 500px;
+  max-width: 400px;
   margin: 0 auto;
+  padding: 0 0 30px;
+}
+
+@media screen and (orientation: landscape) {
+  .flex-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: none;
+    margin: 0 auto;
+    padding: 0 0 30px;
+  }
 }

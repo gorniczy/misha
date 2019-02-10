@@ -17,3 +17,20 @@
     margin: 5% 0;
   }
 }
+
+@media screen and (orientation: landscape) {
+  .footer {
+
+    h3 {
+      margin-top: 0;
+    }
+
+    .phone {
+      margin-top: 0;
+    }
+
+    .address {
+      margin: 0;
+    }
+  }
+}

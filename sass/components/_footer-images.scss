@@ -7,3 +7,15 @@
   align-self: flex-end;
   margin: 0 5% 5% 0;
 }
+
+@media screen and (orientation: landscape) {
+  .bubbles-2 {
+    align-self: center;
+    margin: 0;
+  }
+
+  .bubbles-3 {
+    align-self: center;
+    margin: 0;
+  }
+}

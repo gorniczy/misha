@@ -4,16 +4,39 @@ nav {
     padding: 0;
     margin-right: 5%;
   }
+
   ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 70%;
+    height: 100%;
     padding: 0;
     margin-right: -70%;
-    transition: 1s ease-in-out;
+    list-style-type: none;
 
     li {
-      display: inline-block;
       padding: 0 5%;
       color: $color-primary;
+    }
+  }
+}
+@media screen and (orientation: landscape) {
+  nav {
+    .nav-button {
+      display: none;
+    }
+
+    ul {
+      width: 40%;
+      max-width: 500px;
+      margin-right: 0;
+      border-bottom: 1px solid $color-primary;
+
+      li {
+        padding: 0 7%;
+        color: $color-primary;
+      }
     }
   }
 }

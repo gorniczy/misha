@@ -3,14 +3,15 @@
   h3 {
     display: block;
     text-align: center;
-    padding-top: 10%;
+    padding-top: 100px;
   }
 
   .line-3 {
     display: block;
     width: 70%;
+    max-width: 300px;
     height: 1px;
-    margin: 10% auto;
+    margin: 19px auto 33px;
     background-color: $color-primary;
   }
 }
