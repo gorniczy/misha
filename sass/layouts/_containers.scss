@@ -19,6 +19,16 @@
 }
 
 @media screen and (orientation: landscape) {
+
+  .title-container {
+    flex-direction: row;
+    justify-content: center;
+    width: 80%;
+    max-width: none;
+    min-height: 680px;
+    margin: 5px auto 0;
+  }
+
   .flex-container {
     display: flex;
     justify-content: space-around;
@@ -26,6 +36,6 @@
     width: 90%;
     max-width: none;
     margin: 0 auto;
-    padding: 0 0 30px;
+    padding: 0 0 100px;
   }
 }

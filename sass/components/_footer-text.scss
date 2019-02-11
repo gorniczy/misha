@@ -1,5 +1,4 @@
 .footer {
-
   h3 {
     margin-top: 5%;
     color: $color-text-bright;
@@ -17,20 +16,21 @@
     margin: 5% 0;
   }
 }
-
 @media screen and (orientation: landscape) {
   .footer {
-
     h3 {
       margin-top: 0;
+      text-align: center;
     }
 
     .phone {
       margin-top: 0;
+      text-align: center;
     }
 
     .address {
       margin: 0;
+      text-align: center;
     }
   }
 }

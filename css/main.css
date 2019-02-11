@@ -69,11 +69,8 @@ nav {
   overflow-x: hidden;
 }
 
-.section {
-  min-height: 640px;
-}
-
 .section-1 {
+  min-height: 640px;
   background-image: linear-gradient(-180deg, #D8D8D8 0%, #C3B0A1 100%);
 }
 
@@ -87,7 +84,7 @@ nav {
 
 @media screen and (orientation: landscape) {
   .section {
-    min-height: 850px;
+    min-width: 550px;
   }
 }
 .title-container {
@@ -111,6 +108,15 @@ nav {
 }
 
 @media screen and (orientation: landscape) {
+  .title-container {
+    flex-direction: row;
+    justify-content: center;
+    width: 80%;
+    max-width: none;
+    min-height: 680px;
+    margin: 5px auto 0;
+  }
+
   .flex-container {
     display: flex;
     justify-content: space-around;
@@ -118,7 +124,7 @@ nav {
     width: 90%;
     max-width: none;
     margin: 0 auto;
-    padding: 0 0 30px;
+    padding: 0 0 100px;
   }
 }
 .footer {
@@ -212,6 +218,7 @@ nav ul li {
   nav ul {
     width: 40%;
     max-width: 500px;
+    min-width: 300px;
     margin-right: 0;
     border-bottom: 1px solid #477388;
   }
@@ -247,12 +254,45 @@ nav ul li {
   margin: 0 auto;
 }
 
+@media screen and (orientation: landscape) {
+  .title-container h1 {
+    position: absolute;
+    top: 2%;
+    left: 0;
+  }
+  .title-container .title-image {
+    display: block;
+    width: auto;
+    max-width: none;
+    margin: 0;
+  }
+  .title-container .bubbles-1 {
+    position: absolute;
+    bottom: 20%;
+    right: 0;
+    width: 13%;
+    max-width: 170px;
+    height: auto;
+  }
+  .title-container h2 {
+    position: absolute;
+    right: 0;
+    bottom: 5%;
+    margin: 0 auto;
+  }
+}
 .arrow {
   display: block;
   margin: 0 auto;
   padding: 25px 0;
 }
 
+@media screen and (orientation: landscape) {
+  .arrow {
+    margin: 0 auto 0 50px;
+    padding: 0 0 50px;
+  }
+}
 .content h3 {
   display: block;
   text-align: center;
@@ -302,12 +342,15 @@ nav ul li {
 @media screen and (orientation: landscape) {
   .footer h3 {
     margin-top: 0;
+    text-align: center;
   }
   .footer .phone {
     margin-top: 0;
+    text-align: center;
   }
   .footer .address {
     margin: 0;
+    text-align: center;
   }
 }
 .bubbles-2 {

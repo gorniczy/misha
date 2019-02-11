@@ -1,9 +1,5 @@
-
-.section {
-  min-height: 640px;
-}
-
 .section-1 {
+  min-height: 640px;
   @include background(1);
 }
 
@@ -14,9 +10,8 @@
 .section-3 {
   @include background(3);
 }
-
 @media screen and (orientation: landscape) {
   .section {
-    min-height: 850px;
+    min-width: 550px;
   }
 }

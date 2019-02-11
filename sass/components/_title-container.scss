@@ -29,3 +29,35 @@
     margin: 0 auto;
   }
 }
+@media screen and (orientation: landscape) {
+  .title-container {
+    h1 {
+      position: absolute;
+      top: 2%;
+      left: 0;
+    }
+
+    .title-image {
+      display: block;
+      width: auto;
+      max-width: none;
+      margin: 0;
+    }
+
+    .bubbles-1 {
+      position: absolute;
+      bottom: 20%;
+      right: 0;
+      width: 13%;
+      max-width: 170px;
+      height: auto;
+    }
+
+    h2 {
+      position: absolute;
+      right: 0;
+      bottom: 5%;
+      margin: 0 auto;
+    }
+  }
+}
