@@ -50,12 +50,14 @@ p {
   color: #1A1A1A;
 }
 
-a {
+nav p {
   font-family: "Lato", sans-serif;
   font-size: 18px;
+  font-weight: normal;
   color: #477388;
   margin: 0;
   text-decoration: none;
+  cursor: pointer;
 }
 
 nav {
@@ -195,6 +197,7 @@ nav .nav-button {
   margin-left: auto;
   padding: 0;
   margin-right: 5%;
+  cursor: pointer;
 }
 nav ul {
   display: flex;
