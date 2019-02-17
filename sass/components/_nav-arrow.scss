@@ -1,13 +1,12 @@
 .arrow {
   display: block;
   margin: 0 auto;
-  padding: 25px 0;
   cursor: pointer;
+  transition: all 1s;
 }
 
 @media screen and (orientation: landscape) {
   .arrow {
     margin: 0 auto 0 50px;
-    padding: 0 0 50px;
   }
 }

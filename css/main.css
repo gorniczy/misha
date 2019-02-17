@@ -64,6 +64,7 @@ nav {
 
 .section-1 {
   min-height: 640px;
+  padding-bottom: 25px;
   background-image: linear-gradient(-180deg, #D8D8D8 0%, #C3B0A1 100%);
 }
 
@@ -79,6 +80,10 @@ nav {
   .section {
     min-width: 550px;
   }
+
+  .section-1 {
+    padding-bottom: 50px;
+  }
 }
 .title-container {
   position: relative;
@@ -88,7 +93,7 @@ nav {
   width: 95%;
   max-width: 500px;
   height: 65%;
-  margin: 70px auto 0;
+  margin: 70px auto 25px;
 }
 
 .flex-container {
@@ -278,20 +283,19 @@ nav .nav-list li {
 .arrow {
   display: block;
   margin: 0 auto;
-  padding: 25px 0;
   cursor: pointer;
+  transition: all 1s;
 }
 
 @media screen and (orientation: landscape) {
   .arrow {
     margin: 0 auto 0 50px;
-    padding: 0 0 50px;
   }
 }
 .content h3 {
   display: block;
   text-align: center;
-  padding-top: 100px;
+  padding-top: 120px;
 }
 .content .line-3 {
   display: block;
