@@ -22,7 +22,6 @@ function moveList(position, distance, duration) {
     const currentPosition = negativePosition ? position + distance * timeElapsed / duration : position - distance * timeElapsed / duration;
     const wantedPosition = negativePosition ? Math.min(currentPosition, 0) : Math.max(currentPosition, -70);
     navList.style.marginRight = "" + wantedPosition + "%";
-    console.log(wantedPosition);
     if (timeElapsed < duration) requestAnimationFrame(animation);
   };
   requestAnimationFrame(animation);
@@ -102,6 +101,20 @@ function smoothScroll(target, duration) {
   requestAnimationFrame(animation);
 };
 
+// change arrow position
+
+const arrowPosition = {
+  initial: true,
+  target: "#nav-2"
+}
+
+function moveArrow() {
+  navArrow.style.transform = arrowPosition.initial? "translateY(280%) rotate(180deg)" : "translateY(0) rotate(0)";
+
+  arrowPosition.initial = !arrowPosition.initial;
+  arrowPosition.target = arrowPosition.target === "#nav-2" ? "#nav-1" : "#nav-2";
+};
+
 // assign event listeners to functions
 
 navMisha.addEventListener('click', function() {
@@ -126,7 +139,8 @@ navButton.addEventListener('click', function() {
 });
 
 navArrow.addEventListener('click', function() {
-  smoothScroll('#nav-2', 500);
+  smoothScroll(arrowPosition.target, 500);
+  moveArrow();
 });
 
 window.addEventListener("resize", function() {
