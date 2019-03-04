@@ -2,7 +2,7 @@
 
 const portrait = window.matchMedia("(orientation: portrait)").matches;
 
-// assign DOM elements to consts
+// assign DOM elements to variables
 
 const navButton = document.querySelector('.nav-button');
 const navList = document.querySelector('.nav-list');
@@ -52,33 +52,6 @@ function toggleNavList() {
   }
 }
 
-// return to defaults on window resize
-
-const changeOrientation = {
-  toPortrait: !portrait,
-  toLandscape: portrait
-}
-
-function defaultPortrait() {
-  if (changeOrientation.toPortrait) {
-    navButton.style.display = "inherit";
-    navList.style.marginRight = "-70%";
-    changeOrientation.toPortrait = false;
-    changeOrientation.toLandscape = true;
-    navVisibility.showButton = true;
-    navVisibility.showNavlist = false;
-  }
-}
-
-function defaultLandscape() {
-  if (changeOrientation.toLandscape) {
-    navButton.style.display = "none";
-    navList.style.marginRight = "0";
-    changeOrientation.toLandscape = false;
-    changeOrientation.toPortrait = true;
-  }
-}
-
 // smooth scroll animation
 
 function smoothScroll(target, duration) {
@@ -111,6 +84,33 @@ function moveArrow() {
 
   arrowPosition.initial = !arrowPosition.initial;
   arrowPosition.target = arrowPosition.target === "#nav-2" ? "#nav-1" : "#nav-2";
+}
+
+// return to defaults on window resize
+
+const changeOrientation = {
+  toPortrait: !portrait,
+  toLandscape: portrait
+}
+
+function defaultPortrait() {
+  if (changeOrientation.toPortrait) {
+    navButton.style.display = "inherit";
+    navList.style.marginRight = "-70%";
+    changeOrientation.toPortrait = false;
+    changeOrientation.toLandscape = true;
+    navVisibility.showButton = true;
+    navVisibility.showNavlist = false;
+  }
+}
+
+function defaultLandscape() {
+  if (changeOrientation.toLandscape) {
+    navButton.style.display = "none";
+    navList.style.marginRight = "0";
+    changeOrientation.toLandscape = false;
+    changeOrientation.toPortrait = true;
+  }
 }
 
 // assign event listeners to functions
