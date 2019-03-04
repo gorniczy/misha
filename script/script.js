@@ -2,14 +2,14 @@
 
 const portrait = window.matchMedia("(orientation: portrait)").matches;
 
-// assign DOM elements to consts
+// assign DOM elements to variables
 
-const navButton = document.getElementsByClassName('nav-button')[0];
-const navList = document.getElementsByClassName('nav-list')[0];
-const navMisha = document.getElementsByClassName('nav-misha')[0];
-const navBubbles = document.getElementsByClassName('nav-bubbles')[0];
-const navContact = document.getElementsByClassName('nav-contact')[0];
-const navArrow = document.getElementsByClassName('arrow')[0];
+const navButton = document.querySelector('.nav-button');
+const navList = document.querySelector('.nav-list');
+const navMisha = document.querySelector('.nav-misha');
+const navBubbles = document.querySelector('.nav-bubbles');
+const navContact = document.querySelector('.nav-contact');
+const navArrow = document.querySelector('.arrow');
 
 // navigation list animation for portrait orientation
 
@@ -19,67 +19,38 @@ function moveList(position, distance, duration) {
     if (start === null) start = currentTime;
     const timeElapsed = currentTime - start;
     const negativePosition = position < 0;
-    const currentPosition = negativePosition ? position + distance * timeElapsed / duration : position - distance * timeElapsed / duration;
+    const increment = position + distance * timeElapsed / duration;
+    const decrement = position - distance * timeElapsed / duration;
+    const currentPosition = negativePosition ? increment : decrement;
     const wantedPosition = negativePosition ? Math.min(currentPosition, 0) : Math.max(currentPosition, -70);
     navList.style.marginRight = "" + wantedPosition + "%";
     if (timeElapsed < duration) requestAnimationFrame(animation);
   };
   requestAnimationFrame(animation);
-};
+}
 
 // toggle mobile nav button and nav list
 
 const navVisibility = {
   showButton: true,
   showNavlist: false
-};
+}
 
 function toggleButton() {
   const portrait = window.matchMedia("(orientation: portrait)").matches;
   if (portrait) {
     navButton.style.display = navVisibility.showButton ? "none" : "inherit";
     navVisibility.showButton = !navVisibility.showButton;
-  };
-  return null;
-};
+  }
+}
 
 function toggleNavList() {
   const portrait = window.matchMedia("(orientation: portrait)").matches;
   if (portrait) {
     navVisibility.showNavlist ? moveList(0, 70, 500) : moveList(-70, 70, 500);
     navVisibility.showNavlist = !navVisibility.showNavlist;
-  };
-  return null;
-};
-
-// return to defaults on window resize
-
-const changeOrientation = {
-  toPortrait: !portrait,
-  toLandscape: portrait
-};
-
-function defaultPortrait() {
-  if (changeOrientation.toPortrait) {
-    navButton.style.display = "inherit";
-    navList.style.marginRight = "-70%";
-    changeOrientation.toPortrait = false;
-    changeOrientation.toLandscape = true;
-    navVisibility.showButton = true;
-    navVisibility.showNavlist = false;
-  };
-  return null;
-};
-
-function defaultLandscape() {
-  if (changeOrientation.toLandscape) {
-    navButton.style.display = "none";
-    navList.style.marginRight = "0";
-    changeOrientation.toLandscape = false;
-    changeOrientation.toPortrait = true;
-  };
-  return null;
-};
+  }
+}
 
 // smooth scroll animation
 
@@ -97,9 +68,9 @@ function smoothScroll(target, duration) {
     const wantedPosition = startPosition < scrollToY ? Math.min(currentPosition, scrollToY) : Math.max(currentPosition, scrollToY);
     window.scrollTo(0, wantedPosition);
     if (timeElapsed < duration) requestAnimationFrame(animation);
-  };
+  }
   requestAnimationFrame(animation);
-};
+}
 
 // change arrow position
 
@@ -113,7 +84,34 @@ function moveArrow() {
 
   arrowPosition.initial = !arrowPosition.initial;
   arrowPosition.target = arrowPosition.target === "#nav-2" ? "#nav-1" : "#nav-2";
-};
+}
+
+// return to defaults on window resize
+
+const changeOrientation = {
+  toPortrait: !portrait,
+  toLandscape: portrait
+}
+
+function defaultPortrait() {
+  if (changeOrientation.toPortrait) {
+    navButton.style.display = "inherit";
+    navList.style.marginRight = "-70%";
+    changeOrientation.toPortrait = false;
+    changeOrientation.toLandscape = true;
+    navVisibility.showButton = true;
+    navVisibility.showNavlist = false;
+  }
+}
+
+function defaultLandscape() {
+  if (changeOrientation.toLandscape) {
+    navButton.style.display = "none";
+    navList.style.marginRight = "0";
+    changeOrientation.toLandscape = false;
+    changeOrientation.toPortrait = true;
+  }
+}
 
 // assign event listeners to functions
 
